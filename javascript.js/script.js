@@ -37,8 +37,11 @@ console.log(computer);
 if (giocatore > computer) {
     console.log("il giocatore ha vinto");
 }
-else {
+else if (giocatore < computer) {
     console.log("il computer ha vinto");
 }
-
+else {
+    console.log('Non ha vinto nessuno, entrambi hanno pareggiato');
+}
+ 
 
