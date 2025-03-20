@@ -17,17 +17,22 @@ else {
 
 const mail = ['giovanni@gmail.com', 'lorenzo@outlook.it', 'maurizio@outlook.com', 'nicola@libero.it'];
 let inserimento = prompt('inserisci la tua e-mail');
-for (i=0; i<mail.length; i++){
-    if (inserimento === mail[i]){
-                    console.log('e-mail trovata');
-                    break;
-    }
-    else 
-    {
-       if (inserimento !== mail[i]){
-        console.log('e-mail non trovata');
+for (let i = 0; i < mail.length; i++) {
+    if (inserimento === mail[i]) {
+        console.log('e-mail trovata');
         break;
-       } 
+    }
+    else {
+        if (inserimento !== mail[i]) {
+            console.log('e-mail non trovata');
+            break;
+        }
     }
 }
+
+
+let giocatore = parseInt(prompt('Inserisci un numero compreso tra 1 e 6'));
+let computer = Math.floor(Math.random() * 6) + 1;
+    console.log(computer);
+
 
