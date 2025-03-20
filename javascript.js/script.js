@@ -1,4 +1,3 @@
-/* 
 const email = ['giovanni@gmail.com', 'lorenzo@outlook.it', 'maurizio@outlook.com', 'nicola@libero.it'];
 let inserimentoUtente = prompt('inserisci la tua e-mail');
 let controllo = false;
@@ -12,22 +11,6 @@ if (controllo == true) {
 }
 else {
     console.log('e-mail non trovata')
-}
-*/
-
-const mail = ['giovanni@gmail.com', 'lorenzo@outlook.it', 'maurizio@outlook.com', 'nicola@libero.it'];
-let inserimento = prompt('inserisci la tua e-mail');
-for (let i = 0; i < mail.length; i++) {
-    if (inserimento === mail[i]) {
-        console.log('e-mail trovata');
-        break;
-    }
-    else {
-        if (inserimento !== mail[i]) {
-            console.log('e-mail non trovata');
-            break;
-        }
-    }
 }
 
 
