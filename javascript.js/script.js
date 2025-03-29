@@ -1,30 +1,43 @@
-const email = ['giovanni@gmail.com', 'lorenzo@outlook.it', 'maurizio@outlook.com', 'nicola@libero.it'];
-let inserimentoUtente = prompt('inserisci la tua e-mail');
-let controllo = false;
-for (let i = 0; controllo === false && i < email.length; i++) {
-    if (email[i] === inserimentoUtente) {
-        controllo = true;
+/*const emails = ['giovanni@gmail.com', 'lorenzo@outlook.it', 'maurizio@outlook.com', 'nicola@libero.it'];
+console.log(emails);
+let checkEmail = false;
+let userEmail = prompt('inserisci la tua e-mail');
+
+if(!userEmail.includes('@') || !userEmail.includes('.')){
+    userEmail = prompt('Email inserita non valida. Inseriscila di nuovo');
+}
+
+for (let i = 0; checkEmail == false && i < emails.length; i++) {
+    if (emails[i] === userEmail) {
+        checkEmail = true;
     }
+    console.log(i);
 }
-if (controllo == true) {
-    console.log('e-mail trovata');
+if (checkEmail == true){
+    console.log('Email trovata');
 }
-else {
-    console.log('e-mail non trovata')
-}
+    else {
+        emails.push(userEmail);
+        console.log('Email non presente');
+    }
+console.log(emails);
+*/
 
 
-let giocatore = parseInt(prompt('Inserisci un numero compreso tra 1 e 6'));
-let computer = Math.floor(Math.random() * 6) + 1;
-console.log(computer);
-if (giocatore > computer) {
-    console.log("il giocatore ha vinto");
+let userNumber = parseInt(prompt('Inserisci un numero compreso tra 1 e 6'));
+let pcNumber = Math.floor(Math.random() * 6) + 1;
+
+for (; userNumber > 6 || userNumber <=0;){
+    userNumber = parseInt(prompt('Hai inserito un numero sbagliato. Inseriscilo di nuovo'));
 }
-else if (giocatore < computer) {
-    console.log("il computer ha vinto");
-}
+
+if (userNumber > pcNumber){
+    console.log(`${userNumber}-${pcNumber}: hai vinto!`);
+} 
+else if (userNumber < pcNumber){
+    console.log(`${userNumber}-${pcNumber}: hai perso!`);
+} 
 else {
-    console.log('Non ha vinto nessuno, entrambi hanno pareggiato');
+    console.log('Pareggio');
 }
- 
 
